@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>NetworkTab.qml</file>
+        <file>ProcessTab.qml</file>
     </qresource>
 </RCC>
-

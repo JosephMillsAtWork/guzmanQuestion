@@ -3,11 +3,18 @@ TEMPLATE = app
 QT += qml quick network core
 CONFIG += c++11
 
-SOURCES += main.cpp \
-    downloader.cpp \
-    qfile.cpp
+SOURCES += src/main.cpp \
+           src/downloader.cpp \
+           src/qfile.cpp \
+    src/qqmlprocess.cpp
 
-RESOURCES += qml.qrc
+HEADERS += \
+           src/downloader.h \
+           src/qfile.h \
+    src/qqmlprocess.h
+
+RESOURCES += \
+           qml/qml.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
@@ -15,7 +22,5 @@ QML_IMPORT_PATH =
 # Default rules for deployment.
 include(deployment.pri)
 
-HEADERS += \
-    downloader.h \
-    qfile.h
+
 

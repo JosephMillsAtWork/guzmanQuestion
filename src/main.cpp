@@ -7,6 +7,7 @@
 //local
 #include "downloader.h"
 #include "qfile.h"
+#include "qqmlprocess.h"
 
 int main(int argc, char *argv[])
 {
@@ -17,10 +18,13 @@ int main(int argc, char *argv[])
     // add the classes to the project
     qmlRegisterType<QmlFile>("MyApp",1,0,"QQmlFile");
     qmlRegisterType<Downloader>("MyApp",1,0,"Downloader");
-
+    qmlRegisterType<QQmlProcess>("MyApp",1,0,"QQmlProcess");
 
     // get the users dopwnload folder
     QString downloadFolder = QStandardPaths::standardLocations(QStandardPaths::DownloadLocation).first();
+
+
+
     engine.rootContext()->setContextProperty("downladFolder",downloadFolder);
 
 
